@@ -1,0 +1,11 @@
+Current bugs / Improvements in the application
+1. Connection Pooling - Connection pooling means connections are reused rather than creating each time when requested, which would have improved database performance.
+2. Testing- Testing the filter function and more rigirous testing of the function is needed so that errors can be identified before hand.
+3. The database connection details (host, user, password) are hardcoded in the code. - The should have been strictly avoided, although i was facing some trouble with load_dotenv and fastapi working togther. I would update it as soon as i could resolve it.
+4. Use of ORM to mitigate the risk of SQL injections entirely.
+5. Pagination logic - It fetchs total count before execution of main query thus resulting in extra request being sent. There must be some other workaround.
+6. Code organization - The code could have been divided more specifically into different files for different functions
+7. Use of AWS RDS to host relational database on cloud. I was trying to set it up but Currently facing some issue to connect RDS to EC2.
+8. If hosted on AWS could have set up CI/CD pipeline through github.
+9. Memory Leaks in application - Had very little idea regarding it, so couldn't test Memory leaks.
+10. Was thinking of implementing authorization too, but i guess it was not required as most sites allow users to get a list of products or services without login.

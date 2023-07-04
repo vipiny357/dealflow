@@ -72,11 +72,15 @@ def filter_freelancers(search_params, initial_value: int, last_value: int):
     return filtered_freelancers
 
 #  test for root endpoint
+
+
 @app.get("/")
 async def root():
     return {"message": "Hello World, API Endpoint testing"}
 
 # Endpoint to return the list of all freelancers with pagination default of 10 values
+
+
 @app.get("/freelancers")
 async def show_freelancers(page_number: int = 1, page_size: int = 10):
 

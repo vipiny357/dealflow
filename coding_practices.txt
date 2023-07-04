@@ -1,0 +1,12 @@
+Good Coding Practices
+Some of the goos coding practises i have tried to use include:
+1. Modularity: Tried to use different function for different functionality to improve readability and maintainability. 
+2. Error Handling: Tried to Determine possible causes of errors and handle them accordingly.
+3. Parameter Validation: Tried to validate parameters and raise exceptions when invalid parameters are used.
+4. Descriptive Function and Variable Names: Tried to make the function and variable names clear and descriptive, making it easier to understand their purpose and functionality.
+5. Type Annotations: Used type annotations to specify the types of function parameters, return values, and variables.
+6. Comments: The code includes comments that explain the purpose and functionality of certain sections or lines of code.
+7. SQL Injection Prevention: The code uses parameterized queries to prevent SQL injection attacks. It passes parameters separately from the query instead of directly concatenating them into the query string.
+8. Results Processing: The code fetches results from the database cursor and processes them into dictionaries before returning them as the API response. It makes the response more structured and easier to work with.
+9. Separation of Concerns: The code separates the database-related logic from the API endpoint logic.
+10. Consistent Formatting: The code follows consistent formatting conventions, such as indentation, spacing, and line breaks.
