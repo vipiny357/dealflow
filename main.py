@@ -21,7 +21,15 @@ cursor = db.cursor()
 # Implementation of pagination logic, getting initial value and last value to be returned back
 
 
-def get_page_size(page_number, page_size):
+def get_page_size(page_number: int, page_size: int):
+
+    # Validate page_number and page_size
+    if page_number <= 0 or page_size <= 0:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Page number and page size must be positive integers."
+        )
+
     initial_value = (page_number - 1) * page_size
     last_value = initial_value + page_size
 
@@ -30,7 +38,7 @@ def get_page_size(page_number, page_size):
 #  Filtering the database to get the result based on search parameters
 
 
-def filter_freelancers(search_params, initial_value, last_value):
+def filter_freelancers(search_params, initial_value: int, last_value: int):
     query = "SELECT * FROM users WHERE "
     conditions = []
     params = []
@@ -64,15 +72,11 @@ def filter_freelancers(search_params, initial_value, last_value):
     return filtered_freelancers
 
 #  test for root endpoint
-
-
 @app.get("/")
 async def root():
     return {"message": "Hello World, API Endpoint testing"}
 
 # Endpoint to return the list of all freelancers with pagination default of 10 values
-
-
 @app.get("/freelancers")
 async def show_freelancers(page_number: int = 1, page_size: int = 10):
 
