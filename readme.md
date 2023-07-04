@@ -86,3 +86,6 @@ This has been created for testing load by Loading 1000 data points in the applic
 > If you are facing issue with randominfo library, please refer `https://github.com/bmg02/randominfo/pull/4/commits`
 
 Also the out.sql file is available for testing purposes created by above code ad can be imported to MySQL using `mysqlimport` command.
+
+
+> The `coding_practices.txt` file shows the coding practice i have tried to follow. and the `improvements.txt` file shows possible improvements that can be incorporated

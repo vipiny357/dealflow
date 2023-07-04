@@ -9,3 +9,4 @@ Current bugs / Improvements in the application
 8. If hosted on AWS could have set up CI/CD pipeline through github.
 9. Memory Leaks in application - Had very little idea regarding it, so couldn't test Memory leaks.
 10. Was thinking of implementing authorization too, but i guess it was not required as most sites allow users to get a list of products or services without login.
+11. Tried to set up Docker, was completely new hence, couldnot implement it properly.
