@@ -76,7 +76,7 @@ def filter_freelancers(search_params, initial_value: int, last_value: int):
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World, API Endpoint testing"}
+    return {"message": "Hello World, API Endpoint testing with CI/CD enabled."}
 
 # Endpoint to return the list of all freelancers with pagination default of 10 values
 
