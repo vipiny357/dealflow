@@ -89,3 +89,7 @@ Also the out.sql file is available for testing purposes created by above code ad
 
 
 > The `coding_practices.txt` file shows the coding practice i have tried to follow. and the `improvements.txt` file shows possible improvements that can be incorporated
+
+## CI/CD pipeline 
+
+This repository has been set up with GitHub Actions and PM2 to enable continuous integration and continuous deployment (CI/CD) of the code. The code is deployed on an AWS EC2 instance and utilizes NGINX as the backend service to provide a seamless experience to users.
