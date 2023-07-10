@@ -1,9 +1,21 @@
 from fastapi import FastAPI, status, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from typing import Optional
 import mysql.connector
 
 # initializing an instance of fastapi
 app = FastAPI()
+
+# Allowing cross origin resource sharing
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Establish a connection to MySQL database
 # it should be stored in enviornment variable or as secret for testing purpose only it is kept openly
